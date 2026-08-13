@@ -2,11 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "a36856cb-0e0d-4b52-a5e9-4c927a65a7f1"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "PlatformLearn": {
+    "platformlearn": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -64,10 +66,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "PlatformLearn:build:production"
+              "buildTarget": "platformlearn:build:production"
             },
             "development": {
-              "buildTarget": "PlatformLearn:build:development"
+              "buildTarget": "platformlearn:build:development"
             }
           },
           "defaultConfiguration": "development"
